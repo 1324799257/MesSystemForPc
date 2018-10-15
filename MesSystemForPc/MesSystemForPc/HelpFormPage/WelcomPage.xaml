@@ -1,0 +1,22 @@
+﻿<Page x:Class="MesSystemForPc.HelpFormPage.WelcomPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MesSystemForPc.HelpFormPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="WelcomPage">
+    <Page.Background>
+        <ImageBrush ImageSource="/MesSystemForPc;component/HelpFormImage/Index.jpg" Stretch="Fill"></ImageBrush>
+    </Page.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textBlock" Height="100" Grid.Row="1" TextWrapping="Wrap" Text="欢迎使用学生考勤Mes系统！本窗口将会帮助您了解和使用本系统。点击下方按钮进入下个界面吧！
+" VerticalAlignment="Top" Width="300" FontSize="18" Foreground="Black" Padding="10,0,0,0" />
+    </Grid>
+</Page>
