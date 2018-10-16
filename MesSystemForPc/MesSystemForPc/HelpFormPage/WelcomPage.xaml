@@ -3,10 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:MesSystemForPc.HelpFormPage"
+      xmlns:local="clr-namespace:MesSystemForPc"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="WelcomPage">
+      Title="WelcomPage" Name="AcceptPage">
     <Page.Background>
         <ImageBrush ImageSource="/MesSystemForPc;component/HelpFormImage/Index.jpg" Stretch="Fill"></ImageBrush>
     </Page.Background>
@@ -18,5 +18,16 @@
         </Grid.RowDefinitions>
         <TextBlock x:Name="textBlock" Height="100" Grid.Row="1" TextWrapping="Wrap" Text="欢迎使用学生考勤Mes系统！本窗口将会帮助您了解和使用本系统。点击下方按钮进入下个界面吧！
 " VerticalAlignment="Top" Width="300" FontSize="18" Foreground="Black" Padding="10,0,0,0" />
+        <Button x:Name="button" Content="Next" HorizontalAlignment="Right" Height="18" Margin="231,61,10,6" Grid.Row="2" VerticalAlignment="Bottom" Width="57" FontFamily="Consolas" FontSize="11" Background="#FF98D6CB" Click="button_Click">
+        </Button>
     </Grid>
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="Button.Click">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation  Storyboard.TargetName="AcceptPage" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:2" AutoReverse="False"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Page.Triggers>
 </Page>

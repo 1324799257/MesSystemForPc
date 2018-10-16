@@ -11,19 +11,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MesSystemForPc.HelpFormPage;
 
-namespace MesSystemForPc
+namespace MesSystemForPc.HelpFormPage
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// SecondPage.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SecondPage : Page
     {
-        public MainWindow()
+        public SecondPage()
         {
             InitializeComponent();
-            this.Content = new WelcomPage();
         }
     }
 }

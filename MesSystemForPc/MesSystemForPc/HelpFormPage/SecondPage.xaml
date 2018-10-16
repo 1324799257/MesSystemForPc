@@ -1,0 +1,23 @@
+﻿<Page x:Class="MesSystemForPc.HelpFormPage.SecondPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MesSystemForPc.HelpFormPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="SecondPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/MesSystemForPc;component/HelpFormImage/error.jpg"/>
+        </Grid.Background>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="本系统主要是为了方便学院或学校对学生日常出勤率的一个管理，是MES系统的学校版，通过此系统学院或学校可以了解每个学生每节课的出勤情况，每周或每月进行一个汇总，管理者可以通过手机客户端对学生的出勤情况有一个了解。同时，到学期末，系统可以设定筛选条件，限制某些出勤率未达到要求的学生考试资格!" VerticalAlignment="Top" Grid.Row="1"/>
+        <Button x:Name="button" Content="Next" HorizontalAlignment="Right" Height="18" Margin="231,61,10,6" Grid.Row="2" VerticalAlignment="Bottom" Width="57" FontFamily="Consolas" FontSize="11" Background="#FF98D6CB"/>
+    </Grid>
+</Page>

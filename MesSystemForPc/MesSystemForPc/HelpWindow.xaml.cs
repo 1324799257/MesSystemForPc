@@ -11,24 +11,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MesSystemForPc;
-using System.Threading;
+using MesSystemForPc.HelpFormPage;
 
-namespace MesSystemForPc.HelpFormPage
+namespace MesSystemForPc
 {
     /// <summary>
-    /// WelcomPage.xaml 的交互逻辑
+    /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class WelcomPage : Page
+    public partial class MainWindow : NavigationWindow
     {
-        public WelcomPage()
+        public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new SecondPage());
         }
     }
 }

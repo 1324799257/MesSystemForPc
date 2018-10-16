@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\cyuyan\MesSystemForPc\MesSystemForPc\obj\Debug\
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\
 MesSystemForPc
 none
 false
 DEBUG;TRACE
-F:\cyuyan\MesSystemForPc\MesSystemForPc\App.xaml
-31431070983
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\App.xaml
+41818132998
 
-71525088469
+8820738539
 15-1250794273
-DXWindow1.xaml;HelpFormPage\WelcomPage.xaml;MainWindow.xaml;
+DXWindow1.xaml;HelpFormPage\SecondPage.xaml;HelpFormPage\WelcomPage.xaml;HelpWindow.xaml;
 
 False
 
