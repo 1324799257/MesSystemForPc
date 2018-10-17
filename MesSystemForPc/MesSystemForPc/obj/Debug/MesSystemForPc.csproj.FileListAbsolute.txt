@@ -74,3 +74,5 @@ F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpWindow.g.cs
 F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpWindow.baml
 F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpFormPage\SecondPage.g.cs
 F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpFormPage\SecondPage.baml
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpFormPage\LastPage.g.cs
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpFormPage\LastPage.baml

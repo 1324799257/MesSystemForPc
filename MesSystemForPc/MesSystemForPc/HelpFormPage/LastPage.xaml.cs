@@ -11,31 +11,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MesSystemForPc;
-using System.Threading;
-using MesSystemForPc;
 
 namespace MesSystemForPc.HelpFormPage
 {
     /// <summary>
-    /// WelcomPage.xaml 的交互逻辑
+    /// LastPage.xaml 的交互逻辑
     /// </summary>
-    public partial class WelcomPage : Page
+    public partial class LastPage : Page
     {
-        public WelcomPage()
+        public LastPage()
         {
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-            BeginStoryboard(Resources["WelcomPageAnimation"] as System.Windows.Media.Animation.Storyboard);
-            
-        }
 
-        private void Storyboard_Completed(object sender, EventArgs e)
-        {
-            UIController.PageShow(new SecondPage());
         }
     }
 }

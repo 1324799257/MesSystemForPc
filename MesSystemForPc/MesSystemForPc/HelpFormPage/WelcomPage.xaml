@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:MesSystemForPc"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="WelcomPage" Name="AcceptPage">
+      Title="WelcomPage" Name="FirstPage">
     <Page.Background>
         <ImageBrush ImageSource="/MesSystemForPc;component/HelpFormImage/Index.jpg" Stretch="Fill"></ImageBrush>
     </Page.Background>
@@ -21,11 +21,20 @@
         <Button x:Name="button" Content="Next" HorizontalAlignment="Right" Height="18" Margin="231,61,10,6" Grid.Row="2" VerticalAlignment="Bottom" Width="57" FontFamily="Consolas" FontSize="11" Background="#FF98D6CB" Click="button_Click">
         </Button>
     </Grid>
+    <Page.Resources>
+        <!--每个界面元素都含有一个名为Resources的属性，其存储的是以“键-值”对形式存在的资源，而其子级元素在使用这些资源时会从Resources中找到这些资源。在子级元素引用的资源分为StaticResource和DynamicResource，两者的不同在于，StaticResource在程序编译完成后就不能改变，而DynamicResource在编译完成后可以进行修改-->
+        <Storyboard x:Key="WelcomPageAnimation" Completed="Storyboard_Completed">
+            <DoubleAnimationUsingKeyFrames  Storyboard.TargetName="FirstPage" Storyboard.TargetProperty="Opacity" AutoReverse="False">
+                <LinearDoubleKeyFrame KeyTime="00:00:00" Value="1.0"/>
+                <LinearDoubleKeyFrame KeyTime="00:00:1.5" Value="0.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
     <Page.Triggers>
-        <EventTrigger RoutedEvent="Button.Click">
+        <EventTrigger RoutedEvent="Loaded">
             <BeginStoryboard>
                 <Storyboard>
-                    <DoubleAnimation  Storyboard.TargetName="AcceptPage" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:2" AutoReverse="False"/>
+                    <DoubleAnimation Storyboard.TargetName="FirstPage" Storyboard.TargetProperty="Opacity" Duration="00:00:1.5" From="0.0" To="1.0"/>
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>

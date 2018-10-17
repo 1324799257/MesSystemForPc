@@ -23,5 +23,21 @@ namespace MesSystemForPc.HelpFormPage
         {
             InitializeComponent();
         }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            BeginStoryboard(Resources["SecondAnimation"] as System.Windows.Media.Animation.Storyboard);
+        }
+
+        private void SecondPageStoryboard_Completed_1(object sender, EventArgs e)
+        {
+            UIController.PageShow(new LastPage());
+        }
+
     }
 }

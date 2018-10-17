@@ -18,11 +18,22 @@ namespace MesSystemForPc
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            UIController.StartChangePage += UIController_StartChangePage;
+            UIController_StartChangePage(new WelcomPage());
+        }
+
+        private void UIController_StartChangePage(object Page)
+        {
+            this.Content = Page;
         }
     }
 }
