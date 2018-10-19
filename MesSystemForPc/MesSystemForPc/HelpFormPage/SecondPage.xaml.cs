@@ -11,6 +11,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace MesSystemForPc.HelpFormPage
 {
@@ -19,25 +22,57 @@ namespace MesSystemForPc.HelpFormPage
     /// </summary>
     public partial class SecondPage : Page
     {
+        UserOptionSave _checkWhetherAgreeProtcol;
         public SecondPage()
         {
+            if (_checkWhetherAgreeProtcol == null)
+            {
+                if (File.Exists("UserOptionSave.xml"))
+                {
+                    using (var stream = File.OpenRead("UserOptionSave.xml"))
+                    {
+                        var serializer = new XmlSerializer(typeof(UserOptionSave));
+                        _checkWhetherAgreeProtcol = serializer.Deserialize(stream) as UserOptionSave;
+                    }
+                    _checkWhetherAgreeProtcol.CheckBoxIsEnable = false;
+                }
+                else
+                    _checkWhetherAgreeProtcol = new UserOptionSave();
+            }
             InitializeComponent();
+            DataContext = _checkWhetherAgreeProtcol;
         }
-
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                System.Diagnostics.Process.Start("https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83");//打开协议
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            BeginStoryboard(Resources["SecondAnimation"] as System.Windows.Media.Animation.Storyboard);
+            this.IsEnabled = false;
+            BeginStoryboard(Resources["SecondAnimation"] as System.Windows.Media.Animation.Storyboard);//播放页面下个页面之前的动画效果
+            using (var stream = File.Open("UserOptionSave.xml", FileMode.Create))//保存用户选择
+            {
+                var serializer = new XmlSerializer(typeof(UserOptionSave));
+                serializer.Serialize(stream, _checkWhetherAgreeProtcol);
+            }
         }
 
-        private void SecondPageStoryboard_Completed_1(object sender, EventArgs e)
+        private void SecondPageStoryboard_Completed_1(object sender, EventArgs e)//此页面动画效果播放完后切换到下一个页面
         {
             UIController.PageShow(new LastPage());
         }
 
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            UIController.PageShow(new WelcomPage());//返回第一个页面
+        }
     }
 }

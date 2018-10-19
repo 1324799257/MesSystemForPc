@@ -29,11 +29,11 @@ namespace MesSystemForPc.HelpFormPage
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            BeginStoryboard(Resources["WelcomPageAnimation"] as System.Windows.Media.Animation.Storyboard);
-            
+            this.IsEnabled = false;
+            BeginStoryboard(Resources["WelcomPageAnimation"] as System.Windows.Media.Animation.Storyboard);      //开始页面退出的动画效果    
         }
 
-        private void Storyboard_Completed(object sender, EventArgs e)
+        private void Storyboard_Completed(object sender, EventArgs e)//页面退出的动画效果播放完毕后，触发事件，切换到第二个页面（SecondPage）
         {
             UIController.PageShow(new SecondPage());
         }

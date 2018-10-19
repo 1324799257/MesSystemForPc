@@ -18,23 +18,24 @@
             <ImageBrush ImageSource="/MesSystemForPc;component/HelpFormImage/error.jpg"/>
         </Grid.Background>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="本系统主要是为了方便学院或学校对学生日常出勤率的一个管理，是MES系统的学校版，通过此系统学院或学校可以了解每个学生每节课的出勤情况，每周或每月进行一个汇总，管理者可以通过手机客户端对学生的出勤情况有一个了解。同时，到学期末，系统可以设定筛选条件，限制某些出勤率未达到要求的学生考试资格!" VerticalAlignment="Top" Grid.Row="1"/>
-        <Button x:Name="button" Content="Next" HorizontalAlignment="Right" Height="18" Margin="231,61,10,6" Grid.Row="2" VerticalAlignment="Bottom" Width="57" FontFamily="Consolas" FontSize="11" Background="#FF98D6CB" IsEnabled="{Binding ElementName=checkBox,Path=IsChecked}" Click="button_Click"/>
-        <CheckBox x:Name="checkBox" HorizontalAlignment="Right" Height="14" Margin="0,0,72,10" Grid.Row="2" VerticalAlignment="Bottom" Width="104" RenderTransformOrigin="-0.478,-0.762">
+        <Button x:Name="Next" Content="Next" HorizontalAlignment="Right" Height="19" Margin="0,0,5,5" Grid.Row="2" VerticalAlignment="Bottom" Width="69" Background="#FF98D6CB" UseLayoutRounding="True" FontFamily="Microsoft YaHei UI" TextOptions.TextHintingMode="Animated" Foreground="Black" IsEnabled="{Binding ElementName=checkBox,Path=IsChecked}" Click="button_Click"/>
+        <Button x:Name="Back" Content="&lt;&lt;回头草" HorizontalAlignment="Right" Height="19" Margin="0,0,81,5" Grid.Row="2" VerticalAlignment="Bottom" Width="69" Background="#FF98D6CB" UseLayoutRounding="True" FontFamily="Microsoft YaHei UI" TextOptions.TextHintingMode="Animated" Foreground="Black" Click="Back_Click"/>
+        <CheckBox x:Name="checkBox" HorizontalAlignment="Right" Height="14" Margin="0,0,158,8" Grid.Row="2" VerticalAlignment="Bottom" Width="104" RenderTransformOrigin="-0.478,-0.762" IsChecked="{Binding Path=UserWhetherAgreeProtocol}" IsEnabled="{Binding Path=CheckBoxIsEnable}">
             <Hyperlink Click="Hyperlink_Click">
                 <Run Text="我同意这个协议" Cursor="Hand" />
             </Hyperlink>
         </CheckBox>
     </Grid>
-    <Page.Resources>
+    <Page.Resources><!--页面褪去动画实现-->
         <Storyboard x:Key="SecondAnimation" Completed="SecondPageStoryboard_Completed_1">
-            <DoubleAnimation Storyboard.TargetName="SecondPageName" Storyboard.TargetProperty="Opacity" Duration="00:00:1.5" From="1.0" To="0.0"/>
+            <DoubleAnimation Storyboard.TargetName="SecondPageName" Storyboard.TargetProperty="Opacity" Duration="00:00:1.5" From="1.0" To="0.1"/>
         </Storyboard>
     </Page.Resources>
     <Page.Triggers>
-        <EventTrigger RoutedEvent="Loaded">
+        <EventTrigger RoutedEvent="Loaded"><!--页面进入动画-->
             <BeginStoryboard>
                 <Storyboard>
-                    <DoubleAnimation Storyboard.TargetName="SecondPageName" Storyboard.TargetProperty="Opacity" Duration="00:00:1.5" From="0.0" To="1.0"/>
+                    <DoubleAnimation Storyboard.TargetName="SecondPageName" Storyboard.TargetProperty="Opacity" Duration="00:00:2.0" From="0.1" To="1.0"/>
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>

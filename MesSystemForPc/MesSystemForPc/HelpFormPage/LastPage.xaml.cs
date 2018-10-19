@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MesSystemForPc;
 
 namespace MesSystemForPc.HelpFormPage
 {
@@ -26,7 +27,25 @@ namespace MesSystemForPc.HelpFormPage
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                System.Diagnostics.Process.Start("synopsis.doc");//操作文档
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.IsEnabled = false;
+           BeginStoryboard(Resources["LastPageClose"] as System.Windows.Media.Animation.Storyboard);//页面消失动画
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            UIController.PageShow(new SecondPage());//回退页面
         }
     }
 }

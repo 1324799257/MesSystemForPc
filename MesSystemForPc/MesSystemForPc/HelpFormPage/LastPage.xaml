@@ -23,15 +23,21 @@
                 <Run Text="操作文档" Cursor="Hand" />
             </Hyperlink>
         </TextBlock>
-        <Button x:Name="button" Content="进入新世界" HorizontalAlignment="Right" Height="19" Margin="221,71,0,0" Grid.Row="2" VerticalAlignment="Bottom" Width="69" Background="#FF98D6CB"/>
+        <Button x:Name="button" Content="进入新世界>>" HorizontalAlignment="Right" Height="19" Margin="0,0,4,10" Grid.Row="2" VerticalAlignment="Bottom" Width="81" Background="#FF98D6CB" UseLayoutRounding="True" FontFamily="Microsoft YaHei UI" TextOptions.TextHintingMode="Animated" Foreground="Black" Click="button_Click"/>
+        <Button x:Name="button1" Content="&lt;&lt;回头草" HorizontalAlignment="Right" Height="19" Margin="21,21,90,10" Grid.Row="2" VerticalAlignment="Bottom" Width="69" Background="#FF98D6CB" UseLayoutRounding="True" FontFamily="Microsoft YaHei UI" TextOptions.TextHintingMode="Animated" Foreground="Black" Click="button1_Click"/>
     </Grid>
     <Page.Triggers>
         <EventTrigger RoutedEvent="Loaded">
             <BeginStoryboard>
                 <Storyboard>
-                    <DoubleAnimation Storyboard.TargetName="LastPageName" Storyboard.TargetProperty="Opacity" Duration="00:00:1.5" From="0.0" To="1.0"/>
+                    <DoubleAnimation Storyboard.TargetName="LastPageName" Storyboard.TargetProperty="Opacity" Duration="00:00:1.5" From="0.1" To="1.0"/>
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>
     </Page.Triggers>
+    <Page.Resources>
+        <Storyboard x:Key="LastPageClose">
+            <DoubleAnimation Storyboard.TargetName="LastPageName" Storyboard.TargetProperty="Opacity" Duration="00:00:1.5" From="1.0" To="0.0"/>
+        </Storyboard>
+    </Page.Resources>
 </Page>

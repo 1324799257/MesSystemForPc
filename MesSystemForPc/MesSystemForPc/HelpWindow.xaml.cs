@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MesSystemForPc.HelpFormPage;
+using System.Threading;
 
 namespace MesSystemForPc
 {
@@ -33,7 +34,7 @@ namespace MesSystemForPc
 
         private void UIController_StartChangePage(object Page)
         {
-            this.Content = Page;
+                 this.Content = Page;
         }
     }
 }
