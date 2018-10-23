@@ -27,17 +27,11 @@ namespace MesSystemForPc.HelpFormPage
         {
             if (_checkWhetherAgreeProtcol == null)
             {
+                _checkWhetherAgreeProtcol = UserDataSave.OpenFile() as UserOptionSave;
                 if (File.Exists("UserOptionSave.xml"))
                 {
-                    using (var stream = File.OpenRead("UserOptionSave.xml"))
-                    {
-                        var serializer = new XmlSerializer(typeof(UserOptionSave));
-                        _checkWhetherAgreeProtcol = serializer.Deserialize(stream) as UserOptionSave;
-                    }
                     _checkWhetherAgreeProtcol.CheckBoxIsEnable = false;
                 }
-                else
-                    _checkWhetherAgreeProtcol = new UserOptionSave();
             }
             InitializeComponent();
             DataContext = _checkWhetherAgreeProtcol;
@@ -58,11 +52,7 @@ namespace MesSystemForPc.HelpFormPage
         {
             this.IsEnabled = false;
             BeginStoryboard(Resources["SecondAnimation"] as System.Windows.Media.Animation.Storyboard);//播放页面下个页面之前的动画效果
-            using (var stream = File.Open("UserOptionSave.xml", FileMode.Create))//保存用户选择
-            {
-                var serializer = new XmlSerializer(typeof(UserOptionSave));
-                serializer.Serialize(stream, _checkWhetherAgreeProtcol);
-            }
+            UserDataSave.CloseFile(_checkWhetherAgreeProtcol); //保存用户选择
         }
 
         private void SecondPageStoryboard_Completed_1(object sender, EventArgs e)//此页面动画效果播放完后切换到下一个页面

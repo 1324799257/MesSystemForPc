@@ -76,3 +76,11 @@ F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpFormPage\SecondPa
 F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpFormPage\SecondPage.baml
 F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpFormPage\LastPage.g.cs
 F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\HelpFormPage\LastPage.baml
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\LanuchWindow.g.cs
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\LanuchWindow.baml
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\bin\Debug\DevExpress.Xpf.Carousel.v15.2.dll
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\bin\Debug\DevExpress.Xpf.Carousel.v15.2.xml
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Debug\MesSystemForPc.exe.licenses
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\bin\Debug\MesSystemForPc.exe.config
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\bin\Debug\Microsoft.Expression.Drawing.dll
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\bin\Debug\Microsoft.Expression.Drawing.xml

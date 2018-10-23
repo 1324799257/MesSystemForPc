@@ -1,0 +1,9 @@
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Release\DXWindow1.baml
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Release\DXWindow1.g.cs
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Release\HelpFormPage\LastPage.g.cs
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Release\HelpFormPage\SecondPage.g.cs
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Release\HelpFormPage\WelcomPage.g.cs
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Release\HelpWindow.g.cs
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Release\App.g.cs
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Release\MesSystemForPc_MarkupCompile.cache
+F:\學生MES系統\MesSystemForPc\MesSystemForPc\obj\Release\MesSystemForPc_MarkupCompile.lref

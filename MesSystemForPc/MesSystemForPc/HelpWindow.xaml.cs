@@ -29,7 +29,7 @@ namespace MesSystemForPc
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             UIController.StartChangePage += UIController_StartChangePage;
-            UIController_StartChangePage(new WelcomPage());
+            UIController_StartChangePage(new WelcomPage());//第一个页面
         }
 
         private void UIController_StartChangePage(object Page)
